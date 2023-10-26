@@ -16,31 +16,24 @@
       <div style="margin: 50px 50px 50px 50px;">
 
         <div style="display: flex;">
-          <h1 class="display-5">User List</h1>
-          <a href="/addUser" class="btn btn-outline-dark" style="width: max-content; height: fit-content; margin-top: 11px; margin-left: 15px;">Add User</a>
+          <h1 class="display-5">Profile List</h1>
+          <a href="/addUser" class="btn btn-outline-dark" style="width: max-content; height: fit-content; margin-top: 11px; margin-left: 15px;">Add Profile</a>
         </div>
         <table class="table table">
             <thead class="table-dark">
                 <tr>
-                    <th>E-Mail</th>
-                    <th>Role</th>
-                    <th>Total Posts</th>
-                    <th>Total Likes</th>
+                    <th>Name</th>
+                    <th>Bio</th>
                     <th>Action</th>
 
                 </tr>
             </thead>
-            <% data.forEach(el => { %>
+            <% profileValue.forEach(el => { %>
+             
               <tbody>
                 <tr>
-                  <td><%= el.email %></td>
-                  <td><%= el.role %></td>
-                  <td><%= el.Posts.length %></td>
-                  <td><% totalLikes.forEach(element => { %>
-                    <% if (element.UserId === el.id) { %>
-                       <%= nFormatter(element.total_likes) %>
-                    <% } %>
-                  <% }) %></td>
+                  <td><%= el.titleName %></td>
+                  <td><%= el.bio %></td>
                   <td>
                     <a href="/editUser/<%= el.id %>" class="w-25 btn btn-warning">Edit</a>
                     <a href="/deleteUser/<%= el.id %>" class="w-25 btn btn-danger">Delete</a>
