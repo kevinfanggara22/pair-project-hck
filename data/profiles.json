@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Ally Jane",
+        "bio": "Ini adalah profil pertama",
+        "UserId": 1
+    },
+    {
+        "name": "Billie Way",
+        "bio": "Profil kedua dengan deskripsi singkat",
+        "UserId": 2
+    },
+    {
+        "name": "Cortos Demuro",
+        "bio": "Deskripsi profil ketiga",
+        "UserId": 3
+    },
+    {
+        "name": "Daisy Camelias",
+        "bio": "Deskripsi profil ketiga",
+        "UserId": 4
+    }
+]

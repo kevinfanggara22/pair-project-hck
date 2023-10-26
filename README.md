@@ -1,12 +1,37 @@
 # pair-project-hck
 Phase 1 Pair Project
 
-Social media for sharing food recipe
+Food Story (social media for sharing food recipe)
 
-Users: id, email, password
+Admin features:
+- Login
+- Create User
+- Delete User
+- Create Category
+- Delete Category
 
-Profiles: id, name, address, phone
+User features:
+- Register
+- Login
+- Create Post
+- Update/Edit Post
+- Delete Post
+- Update (Increment) Likes
 
-Posts: id, title, image, description, likes, UserId (FK), CategoryId (FK)
+Route:
+- Landing page ('/')
+- Admin page ('/admin')
+    - Create user ('/admin/createUser) GET POST
+    - Create category ('/admin/createCategory') GET POST
+    - Delete user ('/admin/deleteUser/:id') POST
+    - Delete category ('/admin/deleteCategory/:id') POST
 
-Categories: id, name, PostId (FK)
+- User page('/user')
+    - Register get('/user/register')
+    - Register post('/user/register')
+
+    
+    
+
+
+
