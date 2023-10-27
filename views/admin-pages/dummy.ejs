@@ -21,12 +21,12 @@
         </div>
 
         <% if (deleted) { %>
-          <h4 style="color: red;">
-           <%= deleted %>
-          </h4>
-         <% } %>
+         <h4 style="color: red;">
+          <%= deleted %>
+         </h4>
+        <% } %>
 
-         <form action="/admin" class="d-flex" style="margin-bottom: 10px;">
+        <form action="/admin" class="d-flex" style="margin-bottom: 10px;">
           <input name="search" value="" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 100px;">
           <button value="" class="btn btn-dark" type="submit" style="border-radius: 100px;"><span class="glyphicon 
             glyphicon-search"></span> Search</button>
@@ -38,22 +38,17 @@
                     <th>E-Mail</th>
                     <th>Role</th>
                     <th>Total Posts</th>
-                    <th>Total Likes</th>
                     <th>Action</th>
 
                 </tr>
             </thead>
             <% data.forEach(el => { %>
+             
               <tbody>
                 <tr>
                   <td><%= el.email %></td>
                   <td><%= el.role %></td>
-                  <td><%= el.Posts.length %></td>
-                  <td><% totalLikes.forEach(element => { %>
-                    <% if (element.UserId === el.id) { %>
-                       <%= nFormatter(element.total_likes) %>
-                    <% } %>
-                  <% }) %></td>
+                  <td><%= el.role %></td>
                   <td>
                     <a href="/editUser/<%= el.id %>" class="w-25 btn btn-warning">Edit</a>
                     <a href="/deleteUser/<%= el.id %>" class="w-25 btn btn-danger">Delete</a>

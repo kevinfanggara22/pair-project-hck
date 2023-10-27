@@ -32,9 +32,12 @@
               backdrop-filter: blur(30px);
               border-radius: 30px;
               ">
+
+            
+
             <div class="card-body p-5 shadow-5 text-center">
               <h2 class="fw-bold mb-5">Add New User</h2>
-              
+
               <h5>User as:</h5>
               <form action="/addUser" method="POST">
                 <!-- 2 column grid layout with text inputs for the first and last names
@@ -51,7 +54,7 @@
                   <% let roleOptions = ["Admin", "User"] %>
                   <% roleOptions.forEach(element => { %>
                       <div class="form-check">
-                        <label for="" class="btn btn-light">
+                        <label for="" class="">
                             <input class="form-check-input" type="radio" value="<%= element %>" name="role" id="flexRadioDefault2">
                             <%= element %>
                         </label>
@@ -75,7 +78,7 @@
   
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-dark mb-4" >
-                  Sumbit
+                  Submit
                 </button>
               </form>
             </div>

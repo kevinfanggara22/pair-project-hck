@@ -17,7 +17,7 @@ class ProfileController {
 
     static async addProfile(req, res) {
         try {
-            res.render('./profile-pages/formNewProfile')
+            res.render('profile-pages/formNewProfile')
         } catch (error) {
             console.log(error);
             res.send(error)
@@ -26,7 +26,9 @@ class ProfileController {
 
     static async postNewProfile(req, res) {
         try {
-            
+            const {name, bio, gender} = req.body
+            await Profile.create({name, bio, gender, UserId: req.session.userId})
+            res.redirect('/')
         } catch (error) {
             console.log(error);
             res.send(error)

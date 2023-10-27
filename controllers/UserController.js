@@ -13,10 +13,11 @@ class UserController {
             if(req.query.error) {
                 errorMessage = req.query.error.split(',')
             }
-
+            // console.log(errorMessage);
+            // res.send(errorMessage);
             res.render('auth-pages/register-form', {errorMessage})
         } catch (error) {
-            res.send(error);
+            res.send(error.message);
             console.log(error);
         }
     }

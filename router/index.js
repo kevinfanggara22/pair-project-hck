@@ -4,6 +4,8 @@ const router = express.Router();
 const UserController = require('../controllers/UserController')
 const AdminController = require('../controllers/AdminController')
 const ProfileController = require('../controllers/ProfileController')
+const PostController = require('../controllers/PostController')
+
 
 // Landing Page
 router.get('/', UserController.landingPage)
@@ -40,12 +42,13 @@ router.get('/deleteUser/:id', AdminController.deleteUser)
 //Profile Dashboard
 router.get('/profile', ProfileController.profileDashboard)
 router.get('/addProfile', ProfileController.addProfile)
-router.get('/addProfile', ProfileController.postNewProfile)
+router.post('/addProfile', ProfileController.postNewProfile)
 router.get('/editProfile/:id', ProfileController.editProfile)
 router.get('/editProfile/:id', ProfileController.updateProfile)
 router.get('/deleteUser/:id', ProfileController.deleteProfile)
 
 //Post Dashboard
+router.get('/post', PostController.postDashboard)
 
 
 // User logout
